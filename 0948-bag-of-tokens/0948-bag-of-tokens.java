@@ -1,10 +1,11 @@
 class Solution {
     public int bagOfTokensScore(int[] tokens, int power) {
-        Arrays.sort(tokens);
         int score = 0;
         int maxScore = 0;
         int left = 0;
         int right = tokens.length - 1;
+
+        Arrays.sort(tokens);
 
         while (left <= right) {
             if (power >= tokens[left]) {
