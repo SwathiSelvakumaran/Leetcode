@@ -8,14 +8,11 @@ class Solution {
 
         while (left <= right) {
             if (power >= tokens[left]) {
-                power -= tokens[left];
-                score++;
-                maxScore = Math.max(maxScore, score);
-                left++;
+                power -= tokens[left++];
+                maxScore = Math.max(maxScore, ++score);
             } else if (score > 0) {
-                power += tokens[right];
+                power += tokens[right--];
                 score--;
-                right--;
             } else {
                 break;
             }
