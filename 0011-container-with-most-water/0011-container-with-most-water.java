@@ -7,15 +7,12 @@ class Solution {
         while (l<r){
             
             sum = Math.min(height[l],height[r]) * (r-l); 
-            if(prevsum<sum)
-                prevsum = sum;
+            prevsum = Math.max(sum, prevsum);
             
             if(height[l]<height[r]){
                 l++;
-                System.out.println(prevsum);
             } else{
                 r--;
-                System.out.println(prevsum);
             }
         }
         return prevsum;
