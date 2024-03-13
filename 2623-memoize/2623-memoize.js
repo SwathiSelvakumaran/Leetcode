@@ -9,6 +9,7 @@ function memoize(fn) {
     return function(...args) {
         const key = JSON.stringify(args);
         if (key in memo) {
+            callCount++;
             return memo[key];
         } else {
             callCount++;
