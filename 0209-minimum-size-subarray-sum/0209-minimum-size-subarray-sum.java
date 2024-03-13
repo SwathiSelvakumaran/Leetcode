@@ -11,8 +11,6 @@ class Solution {
                 sum = sum - nums[l];
                 l++;
             }
-                
-            
         }
         
         return minimum == Integer.MAX_VALUE ? 0 : minimum;
