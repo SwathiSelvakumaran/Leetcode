@@ -3,7 +3,7 @@
  * @return {Function}
  */
 function memoize(fn) {
-    let callCount = 0;
+    let callCount = 1;
     const memo = {};
 
     return function(...args) {
@@ -12,7 +12,6 @@ function memoize(fn) {
             callCount++;
             return memo[key];
         } else {
-            callCount++;
             memo[key] = fn(...args);
             return memo[key];
         }
