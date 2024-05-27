@@ -4,9 +4,7 @@ class Solution:
         for index, x in enumerate(nums):
             sum = 0
             for li in nums:                
-                if li == nums[index]:
-                    continue
-                if nums[index]>li:
+                if x>li:
                     sum+=1
             arr[index] = sum
         return arr
